@@ -1,5 +1,5 @@
 function check() {
-  // サーバーサイドへリクエストを送るための処理(2~18行)
+  // サーバーサイドへリクエストを送るための処理(2~23行)
   // cssのセレクタに合致するhtmlを取得
   const posts = document.querySelectorAll(".post");
   // 一つずつの要素に対して繰り返しクリック時の処理を与える
@@ -21,7 +21,7 @@ function check() {
       XHR.responseType = "json";
       // リクエストを送信する
       XHR.send();
-      // コントローラーから返されたレスポンスを取得する
+      // コントローラーから返されたレスポンスを取得する(24~40行目)
       XHR.onload = () => {
         if (XHR.status != 200) {
           alert(`Error ${XHR.status}: ${XHR.statusText}`);
